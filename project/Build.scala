@@ -17,16 +17,15 @@ object Resolvers {
 object BuildSettings {
   lazy val buildSettings = Defaults.defaultSettings ++ Seq (
     organization        := "com.eligotech",
-    crossScalaVersions  := Seq("2.9.1", "2.9.2", "2.10.0", "2.10.1"),
+    crossScalaVersions  := Seq("2.9.2", "2.10.0", "2.10.1", "2.10.2"),
     sbtPlugin           := true,
     version             := "0.1-SNAPSHOT",
     scalaVersion        := Properties.scalaVer,
-    scalacOptions       := Seq("-unchecked", "-deprecation", "-feature", "-target:jvm-1.7"),
+    scalacOptions       := Seq("-unchecked", "-deprecation"),
     //doesn't work
     ivyValidate := false
   )
 }
-
 
 object PublishSettings {
   val publishSettings = Seq(
